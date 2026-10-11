@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали картины — PaintRent</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/painting-detail.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">🎨 PaintRent</a>
+            <nav class="nav">
+                <a href="index.html">← Вернуться к каталогу</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-btn">🛒<span class="badge"><sup>2</sup></span></a>
+                <a href="login.html" class="btn-outline">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы детализации -->
+    <main class="main container painting-detail-container">
+        
+        <!-- Левая колонка: изображение -->
+        <div class="painting-gallery-view">
+            <div class="main-image-wrapper">
+                <img src="https://lavrus.tretyakov.ru/upload/iblock/125/45jj7lt1g3oh9ykfyi7fw4qcam2twd2i.jpg" alt="Утро в сосновом бору">
+                <span class="badge-tag rent" title="Доступно для аренды и покупки">Аренда / Покупка</span>
+            </div>
+        </div>
+
+        <!-- Правая колонка: информация и выбор условий -->
+        <div class="painting-info-panel">
+            <div class="painting-meta-top">
+                <span class="painting-genre">Стиль: Масло</span>
+                <span class="painting-status available">● В наличии</span>
+            </div>
+
+            <h1 class="painting-detail-title">Утро в сосновом бору</h1>
+            <p class="painting-detail-author">Художник: <strong>Иван Шишкин</strong></p>
+            
+            <div class="painting-description">
+                <h3>Описание произведения</h3>
+                <p>Знаменитая картина, олицетворяющая мощь и тишину русской природы. Идеально подойдет для просторных гостиных или классических интерьеров. Полотно прошло полную реставрацию и имеет сертификат подлинности.</p>
+            </div>
+
+            <!-- Блок выбора типа сделки (Аренда или Покупка) -->
+            <div class="purchase-options-box">
+                <div class="option-tabs">
+                    <label class="option-tab active">
+                        <input type="radio" name="deal_type" value="rent" checked> 
+                        <span>Аренда</span>
+                    </label>
+                    <label class="option-tab">
+                        <input type="radio" name="deal_type" value="buy"> 
+                        <span>Покупка</span>
+                    </label>
+                </div>
+
+                <!-- Блок для аренды (выбор дат) -->
+                <div id="rent-options" class="deal-content-block">
+                    <div class="price-tag-large">от 1 500 ₽ <span>/ сутки</span></div>
+                    <div class="date-pickers">
+                        <div class="date-field">
+                            <label for="start-date">Дата начала:</label>
+                            <input type="date" id="start-date" class="search-input">
+                        </div>
+                        <div class="date-field">
+                            <label for="end-date">Дата возврата:</label>
+                            <input type="date" id="end-date" class="search-input">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок для покупки (скрыт по умолчанию, показывается при выборе покупки) -->
+                <div id="buy-options" class="deal-content-block" style="display: none;">
+                    <div class="price-tag-large">45 000 ₽</div>
+                    <p class="buy-note">Единоразовый выкуп в постоянное владение с передачей прав.</p>
+                </div>
+
+                <button class="btn-primary btn-add-cart-large">Добавить в корзину</button>
+            </div>
+
+            <!-- Дополнительные характеристики -->
+            <div class="painting-specs">
+                <div class="spec-item"><span>Размер:</span> 139 × 213 см</div>
+                <div class="spec-item"><span>Год:</span> 1889 г.</div>
+                <div class="spec-item"><span>Галерея:</span> Третьяковская галерея</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/PaintRent" target="_blank" class="github-link">
+                <span>GitHub Репозиторий</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Простой JS для переключения вкладок Аренда/Покупка -->
+    <script>
+        const tabs = document.querySelectorAll('.option-tab');
+        const rentBlock = document.getElementById('rent-options');
+        const buyBlock = document.getElementById('buy-options');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const radio = tab.querySelector('input');
+                if (radio.value === 'rent') {
+                    rentBlock.style.display = 'block';
+                    buyBlock.style.display = 'none';
+                } else {
+                    rentBlock.style.display = 'none';
+                    buyBlock.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
