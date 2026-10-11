@@ -196,19 +196,20 @@ a {
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
-/* Кнопка поиска */
 .search-filter-form .btn-primary {
-    padding: 13px 28px;
-    font-size: 0.95rem;
-    border-radius: 10px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 .search-filter-form .btn-primary:hover {
-    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
-    transform: translateY(-2px);
+    background: transparent;
+    box-shadow: none;
+    transform: scale(1.1); /* Легкое увеличение лупы при наведении */
 }
 
 .classic-btn {
@@ -348,4 +349,8 @@ a {
 
 .github-link:hover .github-icon {
     stroke: var(--accent-gold);
+}
+
+.site-description {
+    margin: 8px;
 }
