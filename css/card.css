@@ -1,0 +1,149 @@
+/* Главное правило сетки */
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+/* Общий контейнер для карточки и кнопок снизу */
+.card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Создает красивый промежуток, полностью выносящий кнопки за пределы карточки */
+}
+
+/* Оформление отдельной карточки */
+.painting-card {
+    background-color: var(--bg-card);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    padding: 10px;
+}
+
+.painting-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.card-img-wrapper {
+    position: relative;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background-color: #121418;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card-footer {
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+
+.painting-card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.badge-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+    background-color: rgba(15, 17, 21, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.name-author-info {
+    margin-bottom: 20px;
+}
+
+.name-author-info h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2px !important;
+    margin-top: 8px !important;
+    line-height: 1.2;
+}
+
+.name-author-info h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.2;
+}
+
+.painting-card a {
+    text-decoration: underline;
+}
+
+/* Блок с кнопками, вынесенный за пределы карточки */
+.card-action {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-details, 
+.btn-cart {
+    flex: 1;
+    padding: 10px 0;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-details {
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-details:hover {
+    border-color: var(--accent-gold);
+}
+
+.btn-cart {
+    background-color: var(--accent-gold);
+    color: #000;
+    border: none;
+    width: 100%;
+}
+
+.btn-cart:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn-cart:active {
+    transform: translateY(1px) scale(0.97); /* Кнопка слегка «проваливается» и сжимается */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Создает эффект вжатия внутрь */
+    filter: brightness(0.955); /* Чуть темнеет при клике */
+}
