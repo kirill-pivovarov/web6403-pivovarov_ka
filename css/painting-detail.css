@@ -1,0 +1,236 @@
+/* ==========================================================================
+   СТИЛИ СТРАНИЦЫ ДЕТАЛЬНОГО РАССМОТРЕНИЯ КАРТИНЫ
+   ========================================================================== */
+.painting-detail-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .painting-detail-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Левая часть: большое изображение */
+.main-image-wrapper {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    max-height: 600px;
+}
+
+.main-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Правая часть: панель информации */
+.painting-info-panel {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+}
+
+.painting-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+}
+
+.painting-genre {
+    color: var(--text-secondary);
+}
+
+.painting-status.available {
+    color: #10b981; /* Зеленый индикатор наличия */
+    font-weight: 600;
+}
+
+.painting-detail-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.painting-detail-author {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+}
+
+.painting-description {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.painting-description h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.painting-description p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Блок выбора условий (Аренда / Покупка) */
+.purchase-options-box {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.option-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.option-tab {
+    flex: 1;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.option-tab input {
+    display: none; /* Скрываем стандартный радиокнопки */
+}
+
+.option-tab.active {
+    border-color: var(--accent-gold);
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--accent-gold);
+}
+
+.price-tag-large {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 14px;
+}
+
+.price-tag-large span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.date-pickers {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.date-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.date-field input {
+    width: 100%;
+    padding: 10px;
+}
+
+.buy-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.btn-add-cart-large {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    background-color: var(--accent-gold);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-add-cart-large:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* Характеристики внизу */
+.painting-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.spec-item span {
+    color: var(--text-muted);
+    margin-right: 8px;
+}
+
+
+.badge-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+    background-color: rgba(15, 17, 21, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.back-to-catalog-btn {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.back-to-catalog-btn:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    transform: translateX(-3px); /* Легкий сдвиг влево при наведении */
+}

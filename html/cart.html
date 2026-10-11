@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — PaintRent</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">🎨 PaintRent</a>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-btn active">🛒<span class="badge"><sup>2</sup></span></a>
+                <a href="login.html" class="btn-outline">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы корзины -->
+    <main class="main container cart-page-container">
+        <div class="page-top-nav">
+            <a href="index.html" class="back-to-catalog-btn">
+                ← Вернуться в каталог
+            </a>
+        </div>
+
+        <h1>Ваша корзина</h1>
+
+        <div class="cart-content-grid">
+            <!-- Левая колонка: список товаров в корзине -->
+            <div class="cart-items-list">
+                
+                <!-- Товар 1 (Аренда) -->
+                <div class="cart-item-card">
+                    <img src="https://lavrus.tretyakov.ru/upload/iblock/125/45jj7lt1g3oh9ykfyi7fw4qcam2twd2i.jpg" alt="Утро в сосновом бору" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <span class="badge-tag rent">Аренда</span>
+                        <h2 class="cart-item-title">Утро в сосновом бору</h2>
+                        <p class="cart-item-author">Иван Шишкин</p>
+                        <p class="cart-item-dates">Сроки: 01.11.2026 — 01.12.2026 (30 дней)</p>
+                        <div class="cart-item-price">1 500 ₽ / сутки</div>
+                    </div>
+                    <button class="btn-remove-item" title="Удалить из корзины">×</button>
+                </div>
+
+                <!-- Товар 2 (Покупка) -->
+                <div class="cart-item-card">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600&q=80" alt="Тишина леса" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <span class="badge-tag buy">Покупка</span>
+                        <h2 class="cart-item-title">Тишина леса</h2>
+                        <p class="cart-item-author">Галерея «Арт-Пространство»</p>
+                        <p class="cart-item-dates">Выкуп в постоянное владение</p>
+                        <div class="cart-item-price">120 000 ₽</div>
+                    </div>
+                    <button class="btn-remove-item" title="Удалить из корзины">×</button>
+                </div>
+
+            </div>
+
+            <!-- Правая колонка: итоговый расчет и оформление (Checkout) -->
+            <div class="cart-summary-card">
+                <h3>Итоговый расчет</h3>
+                
+                <div class="summary-row">
+                    <span>Позиций в корзине:</span>
+                    <strong>2 товара</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Предварительная сумма:</span>
+                    <strong>165 000 ₽</strong>
+                </div>
+
+                <p class="summary-note">
+                    * Цены аренды рассчитываются на основе выбранного количества дней. Окончательная стоимость и бронирование фиксируются при оформлении заказа.
+                </p>
+
+                <button class="btn-primary btn-checkout">Оформить заказ</button>
+                <a href="index.html" class="continue-shopping-link">Продолжить выбор картин</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="site-description">&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/PaintRent" target="_blank" class="github-link">
+                <span>GitHub Репозиторий</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
