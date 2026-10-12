@@ -1,15 +1,8 @@
 /* Главное правило сетки */
-.paintings-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 28px;
-}
 
-/* Общий контейнер для карточки и кнопок снизу */
-.card-item {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* Создает красивый промежуток, полностью выносящий кнопки за пределы карточки */
+.card-link {
+    text-decoration: none !important;
+    color: inherit;
 }
 
 /* Оформление отдельной карточки */
@@ -33,8 +26,8 @@
 
 .card-img-wrapper {
     position: relative;
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+    /* border-top-right-radius: var(--border-radius); */
     width: 100%;
     height: 240px;
     overflow: hidden;
@@ -52,8 +45,6 @@
     width: 100%;
     margin-top: 8px;
 }
-
-
 
 .painting-card:hover .card-img-wrapper img {
     transform: scale(1.05);
@@ -93,18 +84,14 @@
     line-height: 1.2;
 }
 
-.painting-card a {
-    text-decoration: underline;
+
+
+.price {
+    color: var(--accent-gold);
+    font-weight: 800;
 }
 
-/* Блок с кнопками, вынесенный за пределы карточки */
-.card-action {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-details, 
-.btn-cart {
+.add-to-cart-btn {
     flex: 1;
     padding: 10px 0;
     border-bottom-left-radius: var(--border-radius);
@@ -120,30 +107,21 @@
     justify-content: center;
 }
 
-.btn-details {
-    background-color: var(--bg-input);
-    color: var(--text-primary);
-    border: 1px solid var(--border-color);
-}
-
-.btn-details:hover {
-    border-color: var(--accent-gold);
-}
-
-.btn-cart {
+.add-to-cart-btn {
     background-color: var(--accent-gold);
     color: #000;
     border: none;
     width: 100%;
 }
 
-.btn-cart:hover {
+.add-to-cart-btn:hover {
     filter: brightness(1.1);
     transform: translateY(-1px);
 }
 
-.btn-cart:active {
+.add-to-cart-btn:active {
     transform: translateY(1px) scale(0.97); /* Кнопка слегка «проваливается» и сжимается */
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Создает эффект вжатия внутрь */
     filter: brightness(0.955); /* Чуть темнеет при клике */
 }
+

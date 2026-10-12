@@ -6,61 +6,61 @@
     <title>PaintRent — Аренда и покупка картин</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/home-main..css">
 </head>
 <body>
-
-    <!-- Шапка сайта (Header) -->
     <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">🎨 PaintRent</a>
+        <div class="container wrapper">
+            <div class="logo">
+                <a href="index.html">PaintRent</a>
+            </div>
+            
             <nav class="nav">
-                <form class="search-filter-form" action="index.html" method="GET">
-                    <input type="text" name="query" placeholder="Поиск по названию, автору или стилю..." class="search-input">
-                    <select name="style" class="filter-select">
-                        <option value="">Все стили</option>
-                        <option value="impressionism">Импрессионизм</option>
-                        <option value="modern">Модерн</option>
-                        <option value="abstract">Абстракционизм</option>
-                        <option value="realism">Реализм</option>
+                <form action="GET" class="search-form">
+                    <input type="text" class="search-form-input search-form-item" placeholder="Поиск по названию или автору">
+                    <select name="" id="" class="style-selecter search-form-item">
+                        <option value="Авангард">Авангард</option>
+                        <option value="Классика">Классика</option>
                     </select>
-                    <select name="type" class="filter-select">
-                        <option value="">Любой тип</option>
-                        <option value="rent">Доступно для аренды</option>
-                        <option value="purchase">Для покупки</option>
+                    <select name="" id="" class="type-selecter search-form-item">
+                        <option value="Аренда">Аренда</option>
+                        <option value="Покупка">Покупка</option>
+                        <option value="Аренда/Покупка">Аренда/Покупка</option>
                     </select>
-                    <button type="submit" class="btn-primary">🔍</button>
+                    <button class="submit-btn" type="submit">
+                        <img src="../source/magnifier-svgrepo-com.svg" width="20" height="20" alt="Искать">
+                    </button>
                 </form>
             </nav>
-            <div class="header-actions">
-                <a href="cart.html" class="cart-btn">🛒<span class="badge"><sup>2</sup></span></a>
+            
+            <div class="header-right-actions">
+                <div class="cart">
+                    <a href="cart.html" class="cart-link">
+                        <img src="../source/cart-shopping-svgrepo-com.svg" width="20" height="20" alt="Корзина">
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html" class="profile-link">
+                        <img src="../source/profile-svgrepo-com.svg" width="20" height="20" alt="Профиль">
+                    </a>
+                </div>
             </div>
-            <div>
-                <a href="login.html" class="btn-outline">👤</a>
-            </div>
+
         </div>
     </header>
 
-    <!-- Основной контент -->
     <main class="main">
-        
-        <section class="hero-section">
-            <div class="container">
-                <h1>Откройте мир искусства для вашего интерьера</h1>
-                <p>Арендуйте или покупайте оригинальные картины у лучших галерей и независимых художников.</p>
-                <button href="catalog.html" class="classic-btn">Каталог</button>                
-            </div>
+        <section class="hero-section container">
+            <h1>Добро пожаловать в Paintrent!</h1>
+            <p>Арендуйте или покупайте картины у лучших художников и галерей.</p>
         </section>
 
-        <!-- Секция каталога картин -->
         <section class="catalog-section container">
-            <h2>Доступные произведения</h2>
-            
-            <!-- Сетка карточек -->
-            <div class="paintings-grid">
-                
-                <!-- Карточка 1 -->
+            <h2>Доступные картины</h2>
+            <div class="cards-grid">
                 <article>
-                    <a href="painting.html">
+                    <a class="card-link" href="painting.html">
                         <div class="painting-card">
                             <div class="card-img-wrapper">
                                 <img src="https://lavrus.tretyakov.ru/upload/iblock/125/45jj7lt1g3oh9ykfyi7fw4qcam2twd2i.jpg" alt="Утро в сосновом бору">
@@ -76,20 +76,19 @@
                                 <p class="painting-style">Стиль: Масло</p>
                                 
                                 <div class="painting-prices">
-                                    <span class="price-rent">от 1 500 ₽ / сутки</span>
-                                    <span class="price-buy">или 45 000 ₽</span>
+                                    <span class="price">1 500 ₽ / сутки</span>
+                                    <span class="price">или 45 000 ₽</span>
                                 </div>
                             </div>
                         </div>
                     </a>
 
                     <div class="card-footer">
-                        <button class="btn-cart">В корзину</button>
-                    </div>
-                    
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>    
                 </article>
-                
-                <article>
+
+                                <article>
                     <div class="painting-card">
                         <div class="card-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=600&q=80" alt="Городской ритм">
@@ -105,13 +104,13 @@
                             <p class="painting-style">Стиль: Абстракционизм</p>
                             
                             <div class="painting-prices">
-                                <span class="price-rent">от 2 200 ₽ / сутки</span>
+                                <span class="price">от 2 200 ₽ / сутки</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="card-footer">
-                        <button class="btn-cart">В корзину</button>
+                        <button class="add-to-cart-btn">В корзину</button>
                     </div>
                     
                 </article>
@@ -132,44 +131,26 @@
                             <p class="painting-style">Стиль: Реализм</p>
                             
                             <div class="painting-prices">
-                                <span class="price-buy">120 000 ₽</span>
+                                <span class="price">120 000 ₽</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="card-footer">
-                        <button class="btn-cart">В корзину</button>
+                        <button class="add-to-cart-btn">В корзину</button>
                     </div>
                     
                 </article>
-
             </div>
         </section>
     </main>
 
-    <!-- Подвал сайта (Footer) -->
     <footer class="footer">
-        <div class="container footer-container">
-            <p class="site-description">&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
-            <a href="https://github.com/kirill-pivovarov/PaintRent" target="_blank" class="github-link" title="Исходный код на GitHub">
-                <!-- SVG-иконка GitHub -->
-                <svg class="github-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>TehSP GitHub</span>
-            </a>
-            
-        </div>
-        <div class="container footer-container">
-            <a href="https://github.com/kirill-pivovarov/web6403-pivovarov_ka" target="_blank" class="github-link" title="Исходный код на GitHub">
-                <!-- SVG-иконка GitHub -->
-                <svg class="github-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>Web GitHub</span>
-            </a>
+        <div class="footer-container container">
+            <p>&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/web6403-pivovarov_ka">GitHub - Исходный код лабораторных по Web-программированию</a>
+            <a href="https://github.com/kirill-pivovarov/PaintRent">GitHub - Исходный код лабораторных по Технологиям сегевого программирования</a>
         </div>
     </footer>
-
 </body>
 </html>
