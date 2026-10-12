@@ -22,13 +22,15 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh; /* Используем min-height вместо height */
     margin: 0;
+    display: flex;             /* Делаем body флекс-контейнером */
+    flex-direction: column;    /* Располагаем блоки (шапка, мейн, футер) в колонку */
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: sans-serif;
-} 
+}
 
 .container {
     width: 100%;
@@ -50,6 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
 }
 
 .footer-container a {
@@ -62,4 +65,8 @@ body {
 
 .footer-container a:visited {
     color: grey;
+}
+
+.main {
+    flex: 1;
 }

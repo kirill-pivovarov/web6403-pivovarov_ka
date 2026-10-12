@@ -141,24 +141,55 @@
     font-weight: 400;
 }
 
+/* Контейнер для двух полей даты — выстраиваем их в ряд */
 .date-pickers {
     display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
+/* Каждое отдельное поле с подписью */
 .date-field {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    font-size: 0.8rem;
+}
+
+/* Подписи к полям (Дата начала / Дата возврата) */
+.date-field label {
+    font-size: 0.85rem;
     color: var(--text-secondary);
 }
 
-.date-field input {
+/* Стили для самого input с типом date, чтобы он подходил под темную тему */
+.date-field input[type="date"] {
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px 12px;
+    font-size: 0.9rem;
     width: 100%;
-    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: var(--transition);
+}
+
+/* Эффект при наведении или клике на поле даты */
+.date-field input[type="date"]:hover,
+.date-field input[type="date"]:focus {
+    border-color: var(--accent-gold);
+}
+
+/* Меняем цвет иконки календаря в темной теме (актуально для браузеров Chrome/Edge) */
+.date-field input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(0.7);
+    cursor: pointer;
+}
+.date-field input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    filter: invert(1) opacity(1);
 }
 
 .buy-note {
