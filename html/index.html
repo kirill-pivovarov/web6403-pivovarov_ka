@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/home-main..css">
 </head>
 <body>
     <header class="header">
@@ -18,7 +19,6 @@
                 <a href="index.html">PaintRent</a>
             </div>
             
-            <!-- Навигация / Поиск строго по центру -->
             <nav class="nav">
                 <form action="GET" class="search-form">
                     <input type="text" class="search-form-input search-form-item" placeholder="Поиск по названию или автору">
@@ -37,7 +37,6 @@
                 </form>
             </nav>
             
-            <!-- Блок с иконками справа -->
             <div class="header-right-actions">
                 <div class="cart">
                     <a href="cart.html" class="cart-link">
@@ -53,5 +52,108 @@
 
         </div>
     </header>
+
+    <main class="main">
+        <section class="hero-section container">
+            <h1>Добро пожаловать в Paintrent!</h1>
+            <p>Арендуйте или покупайте картины у лучших художников и галерей.</p>
+        </section>
+
+        <section class="catalog-section container">
+            <h2>Доступные картины</h2>
+            <div class="cards-grid">
+                <article>
+                    <a class="card-link" href="painting.html">
+                        <div class="painting-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://lavrus.tretyakov.ru/upload/iblock/125/45jj7lt1g3oh9ykfyi7fw4qcam2twd2i.jpg" alt="Утро в сосновом бору">
+                                <span class="badge-tag rent" title="Доступно для аренды и покупки">Аренда / Покупка</span>
+                            </div>
+                            
+                            <div class="card-content">
+                                <div class="name-author-info">
+                                    <h2 class="painting-title">Утро в сосновом бору</h2>
+                                    <h3 class="painting-author">Иван Шишкин</h3>
+                                </div>
+                                
+                                <p class="painting-style">Стиль: Масло</p>
+                                
+                                <div class="painting-prices">
+                                    <span class="price-rent">от 1 500 ₽ / сутки</span>
+                                    <span class="price-buy">или 45 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="card-footer">
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>    
+                </article>
+
+                                <article>
+                    <div class="painting-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=600&q=80" alt="Городской ритм">
+                            <span class="badge-tag rent" title="Доступно только для аренды">Аренда</span>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="name-author-info">
+                                <h2 class="painting-title">Городской ритм</h2>
+                                <h3 class="painting-author">Елена смирнова</h3>
+                            </div>
+                            
+                            <p class="painting-style">Стиль: Абстракционизм</p>
+                            
+                            <div class="painting-prices">
+                                <span class="price-rent">от 2 200 ₽ / сутки</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>
+                    
+                </article>
+
+                <article>
+                    <div class="painting-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600&q=80" alt="Тишина леса">
+                            <span class="badge-tag rent" title="Доступно только для покупки">Покупка</span>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="name-author-info">
+                                <h2 class="painting-title">Тишина леса</h2>
+                                <h3 class="painting-author">Галерея «Арт-Пространство»</h3>
+                            </div>
+                            
+                            <p class="painting-style">Стиль: Реализм</p>
+                            
+                            <div class="painting-prices">
+                                <span class="price-buy">120 000 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>
+                    
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <p>&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/web6403-pivovarov_ka">GitHub - Исходный код лабораторных по Web-программированию</a>
+            <a href="https://github.com/kirill-pivovarov/PaintRent">GitHub - Исходный код лабораторных по Технологиям сегевого программирования</a>
+        </div>
+    </footer>
 </body>
 </html>

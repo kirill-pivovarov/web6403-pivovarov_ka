@@ -11,7 +11,6 @@
     align-items: center;
     justify-content: space-between; /* Распределяет элементы: первый слева, последний справа, центр посередине */
     width: 100%;
-    max-width: 1300px;
     margin: 0 auto;
     height: 80px;
 }

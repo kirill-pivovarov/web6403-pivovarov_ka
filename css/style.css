@@ -30,3 +30,36 @@ body {
     font-family: sans-serif;
 } 
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    margin-top: 80px;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-container a {
+    color: var(--accent-gold);
+}
+
+.footer-container a:hover {
+    color: var(--accent-gold-hover)
+}
+
+.footer-container a:visited {
+    color: grey;
+}
