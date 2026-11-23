@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — PaintRent</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header">
+        <div class="container wrapper">
+            <div class="logo">
+                <a href="index.html">PaintRent</a>
+            </div>
+            
+            <nav class="nav">
+                <form action="GET" class="search-form">
+                    <input type="text" class="search-form-input search-form-item" placeholder="Поиск по названию или автору">
+                    <select name="" id="" class="style-selecter search-form-item">
+                        <option value="Авангард">Авангард</option>
+                        <option value="Классика">Классика</option>
+                    </select>
+                    <select name="" id="" class="type-selecter search-form-item">
+                        <option value="Аренда">Аренда</option>
+                        <option value="Покупка">Покупка</option>
+                        <option value="Аренда/Покупка">Аренда/Покупка</option>
+                    </select>
+                    <button class="submit-btn" type="submit">
+                        <img src="../source/magnifier-svgrepo-com.svg" width="20" height="20" alt="Искать">
+                    </button>
+                </form>
+            </nav>
+            
+            <div class="header-right-actions">
+                <div class="cart">
+                    <a href="cart.html" class="cart-link">
+                        <img src="../source/cart-shopping-svgrepo-com.svg" width="20" height="20" alt="Корзина">
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html" class="profile-link">
+                        <img src="../source/profile-svgrepo-com.svg" width="20" height="20" alt="Профиль">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Основной контент страницы профиля -->
+    <main class="main">
+        <div class="container profile-page-container">
+            
+            <!-- Кнопка возврата в каталог -->
+            <div class="page-top-nav">
+                <a href="index.html" class="back-to-catalog-btn">
+                    ← Вернуться в каталог
+                </a>
+            </div>
+
+            <h1>Личный кабинет</h1>
+
+            <!-- Сетка профиля: Информация о пользователе + Статистика -->
+            <div class="profile-grid">
+                
+                <!-- Карточка пользователя -->
+                <div class="profile-card user-info-card">
+                    <div class="user-avatar-placeholder">👤</div>
+                    <div class="user-details">
+                        <h2>Алексей Смирнов</h2>
+                        <p class="user-email">alexey.smirnov@example.com</p>
+                        <p class="user-role">Статус: <span class="badge-role">Премиум-коллекционер</span></p>
+                    </div>
+                </div>
+
+                <!-- Блок быстрой статистики -->
+                <div class="profile-card stats-card">
+                    <div class="stat-item">
+                        <span class="stat-value">1</span>
+                        <span class="stat-label">Активных заказа</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">2</span>
+                        <span class="stat-label">В корзине</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Секция с таблицей (требование по проекту) -->
+            <div class="profile-section">
+                <h2>История заказов и аренды</h2>
+                
+                <div class="table-responsive">
+                    <table class="profile-table">
+                        <thead>
+                            <tr>
+                                <th>№ Заказа</th>
+                                <th>Картина</th>
+                                <th>Тип сделки</th>
+                                <th>Сроки / Дата</th>
+                                <th>Сумма</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#PR-8492</td>
+                                <td>«Утро в сосновом бору» (И. Шишкин)</td>
+                                <td><span class="badge-tag rent">Аренда</span></td>
+                                <td>01.11.2026 — 01.12.2026</td>
+                                <td>45 000 ₽</td>
+                                <td><span class="status-badge active-status">Активен</span></td>
+                            </tr>
+                            <tr>
+                                <td>#PR-7210</td>
+                                <td>«Тишина леса» (Галерея)</td>
+                                <td><span class="badge-tag buy">Покупка</span></td>
+                                <td>15.09.2026</td>
+                                <td>120 000 ₽</td>
+                                <td><span class="status-badge finished-status">Выполнено</span></td>
+                            </tr>
+                            <tr>
+                                <td>#PR-6104</td>
+                                <td>«Девятый вал» (И. Айвазовский)</td>
+                                <td><span class="badge-tag rent">Аренда</span></td>
+                                <td>10.06.2026 — 10.07.2026</td>
+                                <td>35 000 ₽</td>
+                                <td><span class="status-badge finished-status">Завершен</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <p>&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/web6403-pivovarov_ka">GitHub - Исходный код лабораторных по Web-программированию</a>
+            <a href="https://github.com/kirill-pivovarov/PaintRent">GitHub - Исходный код лабораторных по Технологиям сегевого программирования</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaintRent — Аренда и покупка картин</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/home-main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container wrapper">
+            <div class="logo">
+                <a href="index.html">PaintRent</a>
+            </div>
+            
+            <nav class="nav">
+                <form action="GET" class="search-form">
+                    <input type="text" class="search-form-input search-form-item" placeholder="Поиск по названию или автору">
+                    <select name="" id="" class="style-selecter search-form-item">
+                        <option value="Авангард">Авангард</option>
+                        <option value="Классика">Классика</option>
+                    </select>
+                    <select name="" id="" class="type-selecter search-form-item">
+                        <option value="Аренда">Аренда</option>
+                        <option value="Покупка">Покупка</option>
+                        <option value="Аренда/Покупка">Аренда/Покупка</option>
+                    </select>
+                    <button class="submit-btn" type="submit">
+                        <img src="../source/magnifier-svgrepo-com.svg" width="20" height="20" alt="Искать">
+                    </button>
+                </form>
+            </nav>
+            
+            <div class="header-right-actions">
+                <div class="cart">
+                    <a href="cart.html" class="cart-link">
+                        <img src="../source/cart-shopping-svgrepo-com.svg" width="20" height="20" alt="Корзина">
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html" class="profile-link">
+                        <img src="../source/profile-svgrepo-com.svg" width="20" height="20" alt="Профиль">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero-section container">
+            <h1>Добро пожаловать в Paintrent!</h1>
+            <p>Арендуйте или покупайте картины у лучших художников и галерей.</p>
+        </section>
+
+        <section class="catalog-section container">
+            <h2>Доступные картины</h2>
+            <div class="cards-grid">
+                <article>
+                    <a class="card-link" href="painting.html">
+                        <div class="painting-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://lavrus.tretyakov.ru/upload/iblock/125/45jj7lt1g3oh9ykfyi7fw4qcam2twd2i.jpg" alt="Утро в сосновом бору">
+                                <span class="badge-tag rent" title="Доступно для аренды и покупки">Аренда / Покупка</span>
+                            </div>
+                            
+                            <div class="card-content">
+                                <div class="name-author-info">
+                                    <h2 class="painting-title">Утро в сосновом бору</h2>
+                                    <h3 class="painting-author">Иван Шишкин</h3>
+                                </div>
+                                
+                                <p class="painting-style">Стиль: Масло</p>
+                                
+                                <div class="painting-prices">
+                                    <span class="price">1 500 ₽ / сутки</span>
+                                    <span class="price">или 45 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="card-footer">
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>    
+                </article>
+
+                <article>
+                    <div class="painting-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=600&q=80" alt="Городской ритм">
+                            <span class="badge-tag rent" title="Доступно только для аренды">Аренда</span>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="name-author-info">
+                                <h2 class="painting-title">Городской ритм</h2>
+                                <h3 class="painting-author">Елена смирнова</h3>
+                            </div>
+                            
+                            <p class="painting-style">Стиль: Абстракционизм</p>
+                            
+                            <div class="painting-prices">
+                                <span class="price">от 2 200 ₽ / сутки</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>
+                    
+                </article>
+
+                <article>
+                    <div class="painting-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600&q=80" alt="Тишина леса">
+                            <span class="badge-tag rent" title="Доступно только для покупки">Покупка</span>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="name-author-info">
+                                <h2 class="painting-title">Тишина леса</h2>
+                                <h3 class="painting-author">Галерея «Арт-Пространство»</h3>
+                            </div>
+                            
+                            <p class="painting-style">Стиль: Реализм</p>
+                            
+                            <div class="painting-prices">
+                                <span class="price">120 000 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="add-to-cart-btn">В корзину</button>
+                    </div>
+                    
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <p>&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/web6403-pivovarov_ka">GitHub - Исходный код лабораторных по Web-программированию</a>
+            <a href="https://github.com/kirill-pivovarov/PaintRent">GitHub - Исходный код лабораторных по Технологиям сегевого программирования</a>
+        </div>
+    </footer>
+</body>
+</html>

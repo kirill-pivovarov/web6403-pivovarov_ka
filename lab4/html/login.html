@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход — PaintRent</title>
+
+    <!-- Общие стили проекта: CSS-переменные, фон, типографика, контейнеры -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <!-- Стили страницы авторизации -->
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/auth.js"defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container wrapper">
+            <div class="logo">
+                <a href="index.html">PaintRent</a>
+            </div>
+
+            <nav class="login-nav" aria-label="Основная навигация">
+                <a class="login-nav__link" href="index.html">Вернуться в каталог</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main login-page">
+        <section class="login-card" aria-labelledby="login-title">
+            <div class="login-card__heading">
+                <span class="login-card__eyebrow">Добро пожаловать в PaintRent</span>
+                <h1 class="login-card__title" id="login-title">Вход в аккаунт</h1>
+                <p class="login-card__description">
+                    Войдите, чтобы управлять заказами, арендовать картины
+                    и работать с галереей.
+                </p>
+            </div>
+
+            <form class="login-form" id="login-form">
+                <div class="login-form__field">
+                    <label class="login-form__label" for="email">Email</label>
+                    <input
+                        class="login-form__input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="name@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="login-form__field">
+                    <label class="login-form__label" for="password">Пароль</label>
+                    <input
+                        class="login-form__input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Введите пароль"
+                        autocomplete="current-password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="login-form__field">
+                    <label class="login-form__label" for="role">Роль пользователя</label>
+                    <select class="login-form__input login-form__select" id="role" name="role" required>
+                        <option value="Client" selected>Client — клиент</option>
+                        <option value="Partner">Partner — партнёр</option>
+                    </select>
+                </div>
+
+                <button class="login-form__submit" type="submit">
+                    Войти
+                </button>
+
+
+                <p class="login-form__message" id="login-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="login-success" id="login-success" hidden role="status" aria-live="polite">
+                <div class="login-success__icon" aria-hidden="true">
+                    <svg viewBox="0 0 52 52" focusable="false">
+                        <circle class="login-success__circle" cx="26" cy="26" r="23" />
+                        <path class="login-success__check" d="M15 27.5 22.5 35 38 18.5" />
+                    </svg>
+                </div>
+                <h2 class="login-success__title">Вы успешно зарегистрировались!</h2>
+                <p class="login-success__description">
+                    Добро пожаловать в PaintRent.
+                </p>
+                <a class="login-success__link" href="index.html">Перейти в каталог</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <p>&copy; 2026 PaintRent. Сервис аренды и покупки картин.</p>
+            <a href="https://github.com/kirill-pivovarov/web6403-pivovarov_ka">
+                GitHub — исходный код лабораторных по Web-программированию
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
